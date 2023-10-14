@@ -2,7 +2,7 @@ let formElement = document.querySelector(".js-form");
 let zlotyElement = document.querySelector(".js-zloty");
 let dollarElement = document.querySelector(".js-dollar");
 
-let usdRate = 4.36;
+let usdRate = 4.31;
 formElement.addEventListener("submit", (event) => {
 event.preventDefault();
 let zloty = zlotyElement.value;

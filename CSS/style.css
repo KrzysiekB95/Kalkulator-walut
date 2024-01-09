@@ -12,4 +12,9 @@ html {
     max-width: 750px;
     padding: 30px;
     margin: 0 auto;
+    resize: both;
+    overflow: auto;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url("https://thumbs.dreamstime.com/z/kalkulator-t%C5%82o-39034340.jpg")
 }

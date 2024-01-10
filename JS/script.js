@@ -1,12 +1,20 @@
-let formElement = document.querySelector(".js-form");
-let zlotyElement = document.querySelector(".js-zloty");
-let dollarElement = document.querySelector(".js-dollar");
+const getZloty = () => {
+    const zlotyElement = document.querySelector(".js-zloty");
+    return zlotyElement.value;
+}
 
-let usdRate = 4.31;
+const count = (usdRate) => {
+    return getZloty() / usdRate;
+}
+
+const insetDollarElement = (usdRate) => {
+    const dollarElement = document.querySelector(".js-dollar");
+    dollarElement.innerHTML = `Dollar: ${count(usdRate).toFixed(2)}`;
+}
+
+const formElement = document.querySelector(".js-form");
+
 formElement.addEventListener("submit", (event) => {
-event.preventDefault();
-let zloty = zlotyElement.value;
-let result = zloty / usdRate;
-
-dollarElement.innerHTML = `Dollar: ${result.toFixed(2)}`;
+    event.preventDefault();
+    insetDollarElement(4.31);
 });
